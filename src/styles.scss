@@ -7,12 +7,14 @@ $background-color_1: #007bff;
   margin: 0 auto;
   padding: 20px;
 }
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
+
 nav {
   a {
     padding: 10px 15px;
@@ -22,6 +24,24 @@ nav {
     border-radius: 5px;
   }
 }
+
 section {
   margin-bottom: 30px;
+}
+
+.w {
+  display: block;
+  float: left;
+}
+
+.w10 {
+  width: 100%;
+}
+
+.w7 {
+  width: 70%;
+}
+
+.w3 {
+  width: 30%;
 }

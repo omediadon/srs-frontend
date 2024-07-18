@@ -1,0 +1,8 @@
+<input type="text" id="searchInput" placeholder="Search Products" (keyup)="onSearchTermChange($any($event).target.value)">
+<div *ngIf="isLoading">Loading results...</div>
+<ul *ngIf="!isLoading && products.length > 0">
+    <li *ngFor="let product of products">
+        {{ product.name }}
+    </li>
+</ul>
+<div *ngIf="!isLoading && products.length === 0">No products found.</div>

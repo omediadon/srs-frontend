@@ -2,11 +2,15 @@
     <header>
         <h1>Welcome to your Dashboard</h1>
         <nav>
-            <a (click)="logout()">Logout - {{ userType | titlecase }}</a>
+            <a href="#!" (click)="logout()">Logout - {{ userType | titlecase }}</a>
         </nav>
     </header>
     <main [ngSwitch]="userType">
-        <app-suggestions *ngSwitchCase="'brand'"/>
+        <div *ngSwitchCase="'brand'" class="w w10">
+            <app-suggestions class="w w7"/>
+            <app-product-search class="w w3"/>
+        </div>
+
         <div *ngSwitchDefault>
             <section>
                 <h2>About Us</h2>
