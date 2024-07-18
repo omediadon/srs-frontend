@@ -1,0 +1,22 @@
+<div class="login-container">
+    <h2>Login To Your SRS Account</h2>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" [(ngModel)]="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" [(ngModel)]="password" required>
+        </div>
+        <div class="form-group">
+            <label for="userType">User Type:</label>
+            <select id="userType" name="userType" [(ngModel)]="userType" required>
+                <option>Select user type</option>
+                <option value="supplier">Supplier</option>
+                <option value="brand">Brand</option>
+            </select>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+</div>
