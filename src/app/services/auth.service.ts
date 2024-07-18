@@ -37,6 +37,10 @@ export class AuthService{
 		return this.currentAuthState.userType;
 	}
 
+	public get currentToken(): string | null{
+		return this.currentAuthState.token;
+	}
+
 	login(email: string, password: string, user_type: string): Observable<any>{
 		return this.http.post<any>(`${this.apiUrl}/auth/login`, {
 					   email,

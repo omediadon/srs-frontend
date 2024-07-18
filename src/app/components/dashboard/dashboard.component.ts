@@ -1,13 +1,19 @@
 import { Component } from '@angular/core';
 import {AuthService} from "../../services/auth.service";
-import {Router} from "@angular/router";
-import {TitleCasePipe} from "@angular/common";
+import {Router, RouterLink} from "@angular/router";
+import {NgSwitch, NgSwitchCase, NgSwitchDefault, TitleCasePipe} from "@angular/common";
+import {SuggestionsComponent} from "../partials/suggestions/suggestions.component";
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
 			   imports: [
-				   TitleCasePipe
+				   TitleCasePipe,
+				   RouterLink,
+				   NgSwitch,
+				   SuggestionsComponent,
+				   NgSwitchCase,
+				   NgSwitchDefault
 			   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'

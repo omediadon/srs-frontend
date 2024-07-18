@@ -12,7 +12,8 @@ export const routes: Routes = [
 	{
 		path     : 'login',
 		component: LoginComponent,
-		canActivate: [authGuard]
+		// For some weird reason causes my pc to hang, will bring back later
+		// canActivate: [authGuard]
 	},
 	{
 		path       : 'dashboard',

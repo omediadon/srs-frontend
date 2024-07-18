@@ -1,0 +1,7 @@
+<h2>Suggested Suppliers</h2>
+<ul>
+    <div *ngIf="isLoading">Loading suggestions...</div>
+    <li *ngFor="let supplier of suppliers">
+        {{ supplier.name }}
+    </li>
+</ul>

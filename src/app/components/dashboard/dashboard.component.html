@@ -1,6 +1,37 @@
-<div class="dashboard-container">
-    <h2>Welcome to your Dashboard</h2>
-    <p>You are logged in as: {{ userType | titlecase }}</p>
-    <p>Lorem Ipsum</p>
-    <button (click)="logout()">Logout</button>
+<div class="container">
+    <header>
+        <h1>Welcome to your Dashboard</h1>
+        <nav>
+            <a (click)="logout()">Logout - {{ userType | titlecase }}</a>
+        </nav>
+    </header>
+    <main [ngSwitch]="userType">
+        <app-suggestions *ngSwitchCase="'brand'"/>
+        <div *ngSwitchDefault>
+            <section>
+                <h2>About Us</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit
+                    arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut
+                    in nulla enim.
+                </p>
+            </section>
+            <section>
+                <h2>Our Services</h2>
+                <p>
+                    Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus
+                    massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec
+                    congue lacinia dui, a porttitor lectus condimentum laoreet.
+                </p>
+            </section>
+            <section>
+                <h2>Contact Us</h2>
+                <p>
+                    Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In
+                    pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis
+                    aliquet egestas purus in blandit.
+                </p>
+            </section>
+        </div>
+    </main>
 </div>
